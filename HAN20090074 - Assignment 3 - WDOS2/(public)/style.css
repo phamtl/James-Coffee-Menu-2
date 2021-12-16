@@ -1,0 +1,63 @@
+#title{
+    text-align: center;
+}
+
+/* buttons */
+.confirm{
+    cursor: pointer;
+}
+.add_to_cart{
+    cursor: pointer;
+}
+.save_fav{
+    display: none;
+    cursor: pointer;
+}
+#ord_fav_btn{
+    cursor: pointer;
+}
+#submit_ord_btn{
+    cursor: pointer;
+}
+
+#type_container{
+    line-height: 200%;
+    margin: 0% 25%;
+    text-align: center;
+}
+/* the type options */
+.types{
+    margin: 5% 30% 1%;
+}
+.type_button{
+    font-size: 3vh;
+    padding: 2% 15%;
+    background-color: rgb(139, 37, 37);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* hiding all the details box */
+#espresso_details{
+    display: none;
+}
+#cappuccino_details{
+    display: none;
+}
+#americano_details{
+    display: none;
+}
+#pour_over_details{
+    display: none;
+}
+#chemex_details{
+    display: none;
+}
+
+#cart_container{
+    text-align: center;
+    margin: 3% 25%;
+}
+#cart_title{
+    font-size: 3vh;
+}

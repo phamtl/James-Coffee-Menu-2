@@ -1,0 +1,4 @@
+{
+    "Coffees" : ["House Espresso", "Guest Espresso", "Single Origin", "House Blend"],
+    "Extras" : ["No Extra", "Cold Milk", "Hot Milk", "Chocolate Dusting", "Marshmallows", "Whipped Cream"]
+}

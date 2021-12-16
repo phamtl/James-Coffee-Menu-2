@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JCS">
+    <link rel="stylesheet" href="style.css">
+    <title>James Menu Drinks</title>
+</head>
+<body onload="GetInfo()">
+  <div id="container">
+    <div id="title">
+      <h1>James Coffee Shop</h1>
+      <h2>Drinks</h2>
+      <p>Select your favourite drink right here! Click on the drinks to view your options!</p>
+    </div>
+    <div id="menu_container">
+      <div id="type_container">
+        <div class="types">
+          <button class="type_button" id="espresso_button">Espresso</button>
+        </div>
+        <div id="espresso_details">
+          <fieldset>
+            <div class="size">
+              <h2>Sizes:</h2>
+
+              <input type="radio" name="esp_size" value="single" id="esp_size1" checked>
+              <label for="esp_size1">Single</label><br>
+    
+              <input type="radio" name="esp_size" value="double" id="esp_size2">
+              <label for="esp_size2">Double</label><br>
+            </div>
+  
+            <div class="coffee">
+              <h2>Coffee:</h2>
+
+              <input type="radio" name="esp_coffee" value="house espresso" id="esp_coffee1" checked>
+              <label for="esp_coffee1" class="HouseEspresso"></label><br>
+  
+              <input type="radio" name="esp_coffee" value="guest espresso" id="esp_coffee2">
+              <label for="esp_coffee2" class="GuestEspresso"></label><br>
+            </div>
+  
+            <div class="extras">
+              <h2>Extras:</h2>
+
+              <input id="esp_extra0" type="radio" name="esp_extra" value="no extra" checked>
+              <label for="esp_extra0" class="NoExtra"></label><br>
+              
+              <input id="esp_extra1" type="radio" name="esp_extra" value="cold milk">
+              <label for="esp_extra1" class="ColdMilk"></label><br>
+  
+              <input id="esp_extra2" type="radio" name="esp_extra" value="hot milk">
+              <label for="esp_extra2" class="HotMilk"></label><br>
+                  
+              <input id="esp_extra3" type="radio" name="esp_extra" value="chocolate dusting">
+              <label for="esp_extra3" class="ChocoDusting"></label><br>
+                  
+              <input id="esp_extra4" type="radio" name="esp_extra" value="marshmallow">
+              <label for="esp_extra4" class="Marshmallow"></label><br>
+                  
+              <input id="esp_extra5" type="radio" name="esp_extra" value="whipped cream">
+              <label for="esp_extra5" class="WhippedCream"></label><br>
+              
+              <button class="confirm" id="esp_confirm">Confirm Choices</button>
+            </div>
+  
+            <div class="current_drink_container">
+              <div class="current_drink">
+                <fieldset>
+                  <legend><h2>Your Current Drink</h2></legend>
+                  <p id="esp_price"></p>
+                  <p id="esp_drink"></p>
+                </fieldset>
+              </div>
+              <button class="add_to_cart" id="esp_add_to_cart">Add To Cart</button>
+              <button class="save_fav" id="esp_save_fav">Save Favourite</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="types">
+          <button id="cappuccino_button" class="type_button">Cappuccino</button>
+        </div>
+        <div id="cappuccino_details">
+          <fieldset>
+            <div class="size">
+              <h2>Sizes:</h2>
+
+              <input type="radio" name="cap_size" value="small" id="cap_size1">
+              <label for="cap_size1">Small</label><br>
+  
+              <input type="radio" name="cap_size" value="medium" id="cap_size2" checked>
+              <label for="cap_size2">Medium</label><br>
+              
+              <input type="radio" name="cap_size" value="large" id="cap_size3">
+              <label for="cap_size3">Large</label><br>
+            </div>
+  
+            <div class="coffee">
+              <h2>Coffee:</h2>
+
+              <input type="radio" name="cap_coffee" value="house espresso" id="cap_coffee1" checked>
+              <label for="cap_coffee1" class="HouseEspresso"></label><br>
+  
+              <input type="radio" name="cap_coffee" value="guest espresso" id="cap_coffee2">
+              <label for="cap_coffee2" class="GuestEspresso"></label><br>
+            </div>
+  
+            <div class="extras">
+              <h2>Extras:</h2>
+
+              <input id="cap_extra0" type="radio" name="cap_extra" value="no extra" checked>
+              <label for="cap_extra0" class="NoExtra"></label><br>
+
+              <input id="cap_extra1" type="radio" name="cap_extra" value="cold milk">
+              <label for="cap_extra1" class="ColdMilk"></label><br>
+  
+              <input id="cap_extra2" type="radio" name="cap_extra" value="hot milk">
+              <label for="cap_extra2" class="HotMilk"></label><br>
+                  
+              <input id="cap_extra3" type="radio" name="cap_extra" value="chocolate dusting">
+              <label for="cap_extra3" class="ChocoDusting"></label><br>
+                  
+              <input id="cap_extra4" type="radio" name="cap_extra" value="marshmallow">
+              <label for="cap_extra4" class="Marshmallow"></label><br>
+                  
+              <input id="cap_extra5" type="radio" name="cap_extra" value="whipped cream">
+              <label for="cap_extra5" class="WhippedCream"></label><br>
+              
+              <button class="confirm" id="cap_confirm">Confirm Choices</button>
+            </div>
+
+            <div class="current_drink">
+              <div class="current_drink">
+                <fieldset>
+                  <legend><h2>Your Current Drink</h2></legend>
+                  <p id="cap_price"></p>
+                  <p id="cap_drink"></p>
+                </fieldset>
+              </div>
+              <button class="add_to_cart" id="cap_add_to_cart">Add To Cart</button>
+              <button class="save_fav" id="cap_save_fav">Save Favourite</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="types">
+          <button id="americano_button" class="type_button">Americano</button>
+        </div>
+        <div id="americano_details">
+          <fieldset>
+            <div class="size">
+              <h2>Sizes:</h2>
+
+              <input type="radio" name="ame_size" value="small" id="ame_size1">
+              <label for="ame_size1">Small</label><br>
+  
+              <input type="radio" name="ame_size" value="medium" id="ame_size2" checked>
+              <label for="ame_size2">Medium</label><br>
+              
+              <input type="radio" name="ame_size" value="large" id="ame_size3">
+              <label for="ame_size3">Large</label><br>
+            </div>
+  
+            <div class="coffee">
+              <h2>Coffee:</h2>
+
+              <input type="radio" name="ame_coffee" value="house espresso" id="ame_coffee1" checked>
+              <label for="ame_coffee1" class="HouseEspresso"></label><br>
+  
+              <input type="radio" name="ame_coffee" value="guest espresso" id="ame_coffee2">
+              <label for="ame_coffee2" class="GuestEspresso"></label><br>
+            </div>
+  
+            <div class="extras">
+              <h2>Extras:</h2>
+
+              <input id="ame_extra0" type="radio" name="ame_extra" value="no extra" checked>
+              <label for="ame_extra0" class="NoExtra"></label><br>
+
+              <input id="ame_extra1" type="radio" name="ame_extra" value="cold milk">
+              <label for="ame_extra1" class="ColdMilk"></label><br>
+  
+              <input id="ame_extra2" type="radio" name="ame_extra" value="hot milk">
+              <label for="ame_extra2" class="HotMilk"></label><br>
+                  
+              <input id="ame_extra3" type="radio" name="ame_extra" value="chocolate dusting">
+              <label for="ame_extra3" class="ChocoDusting"></label><br>
+                  
+              <input id="ame_extra4" type="radio" name="ame_extra" value="marshmallow">
+              <label for="ame_extra4" class="Marshmallow"></label><br>
+                  
+              <input id="ame_extra5" type="radio" name="ame_extra" value="whipped cream">
+              <label for="ame_extra5" class="WhippedCream"></label><br>
+              
+              <button class="confirm" id="ame_confirm">Confirm Choices</button>
+            </div>
+  
+            <div class="current_drink">
+              <div class="current_drink">
+                <fieldset>
+                  <legend><h2>Your Current Drink</h2></legend>
+                  <p id="ame_price"></p>
+                  <p id="ame_drink"></p>
+                </fieldset>
+              </div>
+              <button class="add_to_cart" id="ame_add_to_cart">Add To Cart</button>
+              <button class="save_fav" id="ame_save_fav">Save Favourite</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="types">
+          <button id="pour_over_button" class="type_button">Pour Over</button>
+        </div>
+        <div id="pour_over_details">
+          <fieldset>
+            <div class="size">
+              <h2>Sizes:</h2>
+
+              <input type="radio" name="po_size" value="small" id="po_size1">
+              <label for="po_size1">Small</label><br>
+  
+              <input type="radio" name="po_size" value="medium" id="po_size2" checked>
+              <label for="po_size2">Medium</label><br>
+              
+              <input type="radio" name="po_size" value="large" id="po_size3">
+              <label for="po_size3">Large</label><br>
+            </div>
+  
+            <div class="coffee">
+              <h2>Coffee:</h2>
+
+              <input type="radio" name="po_coffee" value="single origin" id="po_coffee1">
+              <label for="po_coffee1" class="SingleOrigin"></label><br>
+  
+              <input type="radio" name="po_coffee" value="house blend" id="po_coffee2" checked>
+              <label for="po_coffee2" class="HouseBlend"></label><br>
+            </div>
+  
+            <div class="extras">
+              <h2>Extras:</h2>
+
+              <input id="po_extra0" type="radio" name="po_extra" value="no extra" checked>
+              <label for="po_extra0" class="NoExtra"></label><br>
+
+              <input id="po_extra1" type="radio" name="po_extra" value="cold milk">
+              <label for="po_extra1" class="ColdMilk"></label><br>
+  
+              <input id="po_extra2" type="radio" name="po_extra" value="hot milk">
+              <label for="po_extra2" class="HotMilk"></label><br>
+                  
+              <input id="po_extra3" type="radio" name="po_extra" value="chocolate dusting">
+              <label for="po_extra3" class="ChocoDusting"></label><br>
+                  
+              <input id="po_extra4" type="radio" name="po_extra" value="marshmallow">
+              <label for="po_extra4" class="Marshmallow"></label><br>
+                  
+              <input id="po_extra5" type="radio" name="po_extra" value="whipped cream">
+              <label for="po_extra5" class="WhippedCream"></label><br>
+              
+              <button class="confirm" id="po_confirm">Confirm Choices</button>
+            </div>
+  
+            <div class="current_drink">
+              <div class="current_drink">
+                <fieldset>
+                  <legend><h2>Your Current Drink</h2></legend>
+                  <p id="po_price"></p>
+                  <p id="po_drink"></p>
+                </fieldset>
+              </div>
+              <button class="add_to_cart" id="po_add_to_cart">Add To Cart</button>
+              <button class="save_fav" id="po_save_fav">Save Favourite</button>
+            </div>            
+          </fieldset>
+        </div>
+
+        <div class="types">
+          <button id="chemex_button" class="type_button">Chemex</button>
+        </div>
+        <div id="chemex_details">
+          <fieldset>
+            <div class="size">
+              <h2>Sizes:</h2>
+
+              <input type="radio" name="chx_size" value="fixed" id="chx_size" checked>
+              <label for="chx_size">Fixed</label><br>
+            </div>
+  
+            <div class="coffee">
+              <h2>Coffee: </h2>
+
+              <input type="radio" name="chx_coffee" value="single origin" id="chx_coffee1">
+              <label for="chx_coffee1" class="SingleOrigin"></label><br>
+  
+              <input type="radio" name="chx_coffee" value="house blend" id="chx_coffee2" checked>
+              <label for="chx_coffee2" class="HouseBlend"></label><br>
+            </div>
+  
+            <div class="extras">
+              <h2>Extras:</h2>
+
+              <input id="chx_extra0" type="radio" name="chx_extra" value="no extra" checked>
+              <label for="chx_extra0" class="NoExtra"></label><br>
+
+              <input id="chx_extra1" type="radio" name="chx_extra" value="cold milk">
+              <label for="chx_extra1" class="ColdMilk"></label><br>
+  
+              <input id="chx_extra2" type="radio" name="chx_extra" value="hot milk">
+              <label for="chx_extra2" class="HotMilk"></label><br>
+                  
+              <input id="chx_extra3" type="radio" name="chx_extra" value="chocolate dusting">
+              <label for="chx_extra3" class="ChocoDusting"></label><br>
+                  
+              <input id="chx_extra4" type="radio" name="chx_extra" value="marshmallow">
+              <label for="chx_extra4" class="Marshmallow"></label><br>
+                  
+              <input id="chx_extra5" type="radio" name="chx_extra" value="whipped cream">
+              <label for="chx_extra5" class="WhippedCream"></label><br>
+              
+              <button class="confirm" id="chx_confirm">Confirm Choices</button>
+            </div>
+  
+            <div class="current_drink">
+              <div class="current_drink">
+                <fieldset>
+                  <legend><h2>Your Current Drink</h2></legend>
+                  <p id="chx_price"></p>
+                  <p id="chx_drink"></p>
+                </fieldset>
+              </div>
+              <button class="add_to_cart" id="chx_add_to_cart">Add To Cart</button>
+              <button class="save_fav" id="chx_save_fav">Save Favourite</button>
+            </div>            
+          </fieldset>
+        </div>
+      </div>
+
+      <div id="cart_container">
+        <fieldset>
+          <legend id="cart_title"><h2>Your cart</h2></legend>
+
+          <div id="cart_content">
+            <div id="cart_price">
+              <p id="total_price"></p>
+            </div>
+
+            <div id="cart_drinks">
+            </div>
+
+            <div id="order_fav">
+              <button id="ord_fav_btn">Order Favourite Drink</button><br><br>
+            </div>
+
+            <div id="submit_order">
+              <button id="submit_ord_btn">Submit Order</button>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <script src="func.js"></script>
+</body>
+</html>
